@@ -2,31 +2,25 @@ import React from 'react'
 
 export default function About() {
     return (
-        <div className="py-16 bg-white">
-            <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-                <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
-                    <div className="md:5/12 lg:w-5/12">
-                        <img
-                            src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
-                            alt="image"
-                        />
-                    </div>
-                    <div className="md:7/12 lg:w-6/12">
-                        <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
-                            React development is carried out by passionate developers
-                        </h2>
-                        <p className="mt-6 text-gray-600">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem
-                            accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde
-                            aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!
-                        </p>
-                        <p className="mt-4 text-gray-600">
-                            Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at?
-                            Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+        <div className="max-w-3xl mx-auto p-4">
+            <h1 className="text-3xl font-semibold text-gray-800 mb-4">About Us</h1>
+            <p className="text-lg text-gray-600 mb-8">
+                Welcome to <strong className="font-bold">Earn Watch Ads</strong>, where you can turn your time into earnings by simply watching ads. Our mission is to provide a user-friendly platform for individuals looking to make money while enjoying advertisements.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Story</h2>
+            <p className="text-lg text-gray-600 mb-8">
+                We started this platform with a simple idea: why not get rewarded for the time you spend viewing ads? With the rise of online advertising, we saw an opportunity to create a win-win situation for both users and advertisers. By watching ads on our platform, you not only earn money but also help businesses promote their products and services.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">How It Works</h2>
+            <p className="text-lg text-gray-600 mb-8">
+                Earning money through <strong className="font-bold">Earn Watch Ads</strong> is easy. Simply sign up, log in, and start watching ads. You'll accumulate earnings with each ad view. We offer a seamless and secure payment process to ensure you receive your earnings on time.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
+            <p className="text-lg text-gray-600 mb-4">
+                We value your feedback and questions. If you have any inquiries or suggestions, please don't hesitate to get in touch with our support team at <a className="text-blue-500 hover:underline" href="mailto:support@moneyview.com">support@moneyview.com</a>.
+            </p>
+        </div>);
 }
