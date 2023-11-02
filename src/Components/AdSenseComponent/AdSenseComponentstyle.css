@@ -1,0 +1,16 @@
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #upper-div {
+    /* Adjust styles for tablets here */
+    width: 80%;
+  }
+}
+
+/* Media query for phones (portrait) */
+@media (max-width: 412px) {
+  #upper-div {
+    width: 90%;
+  }
+}
+
