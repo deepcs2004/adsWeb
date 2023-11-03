@@ -54,9 +54,9 @@ class AdSenseComponent extends Component {
 
     render() {
         return (
-            <div className="ad-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <div className="ad-container " style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <div id="upper-div"
-                    className="w-1/2 aspect-16/9 m-5 bg-gray relative"
+                    className="w-1/2 aspect-16/9  bg-gray relative m-5"
                     style={{
                         minWidth: '70%', maxWidth: '90%', paddingBottom: '36.25%', background: 'gray', position: 'relative',
                         boxShadow:'0 0 10px 5px rgba(128, 0, 128, 0.6)'

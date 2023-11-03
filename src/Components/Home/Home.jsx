@@ -4,8 +4,11 @@ import AdSenseComponent from '../AdSenseComponent/AdSenseComponent';
 
 
 export default function Home() {
+
+    const  bgUrl = 'https://images.pexels.com/photos/106152/euro-coins-currency-money-106152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+
     return (
-        <div className="mx-auto w-full max-w-7xl">
+        <div style={{ backgroundImage: `url(${bgUrl})` }} className="mx-auto  w-full max-w-7.5xl">
 
             <AdSenseComponent/>
 

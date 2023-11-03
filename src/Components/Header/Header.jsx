@@ -9,10 +9,11 @@ function Header() {
           <Link to="/" className="flex items-center">
             <img
               
-              src="https://img.icons8.com/fluency/48/000000/cheap-2.png"
-              className="mr-3 h-12"
+              src="https://img.icons8.com/papercut/60/cheap-2--v2.png"
+              className=" mr-3 w-17 h-15"
               alt="Logo"
             />
+            <span className=' text-lime-500 text-xl font-mono'>MoneyView</span>
           </Link>
           <div className="flex items-center lg:order-2">
             <Link
@@ -40,8 +41,8 @@ function Header() {
                   to="/"
                   className={({isActive}) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-orange-700" :" text-gray-700"}
-                    lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    ${isActive ? "text-green-500" :" text-gray-700"}
+                    lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
                   Home
@@ -53,8 +54,8 @@ function Header() {
                   to="/about"
                   className={({isActive}) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-orange-700" :" text-gray-700"}
-                    lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    ${isActive ? "text-green-500" :" text-gray-700"}
+                    lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
                   About
@@ -66,8 +67,8 @@ function Header() {
                   to="/contact"
                   className={({isActive}) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-orange-700" :" text-gray-700"}
-                    lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    ${isActive ? "text-green-500" :" text-gray-700"}
+                    lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
                   Contact
@@ -79,8 +80,8 @@ function Header() {
                   to="/blog"
                   className={({isActive}) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-orange-700" :" text-gray-700"}
-                    lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    ${isActive ? "text-green-500" :" text-gray-700"}
+                    lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
                   Blog
@@ -92,8 +93,8 @@ function Header() {
                   to="/account"
                   className={({isActive}) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-orange-700" :" text-gray-700"}
-                    lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    ${isActive ? "text-green-500" :" text-gray-700"}
+                    lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
                   Account

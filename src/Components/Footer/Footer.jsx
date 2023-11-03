@@ -9,10 +9,11 @@ export default function Footer() {
                     <div className="mb-6 md:mb-0">
                         <Link to="/" className="flex items-center">
                             <img
-                                src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-                                className="mr-3 h-16"
+                                src="https://img.icons8.com/papercut/60/cheap-2--v2.png"
+                                className=" mr-3 w-17 h-15"
                                 alt="Logo"
                             />
+                            <span className='font-mono text-xl text-lime-500'>MoneyView</span>
                         </Link>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
