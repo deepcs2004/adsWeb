@@ -3,6 +3,13 @@ import React from 'react'
 export default function About() {
     return (
         <div className="max-w-3xl mx-auto p-4">
+            <div className='w-full'>
+                <img 
+                src="https://github.com/deepcs2004/my-image/blob/main/%E2%80%94Pngtree%E2%80%94money%20background_200823.jpg?raw=true" 
+                alt="Image" 
+                
+                />
+            </div>
             <h1 className="text-3xl font-semibold text-gray-800 mb-4">About Us</h1>
             <p className="text-lg text-gray-600 mb-8">
                 Welcome to <strong className="font-bold">Earn Watch Ads</strong>, where you can turn your time into earnings by simply watching ads. Our mission is to provide a user-friendly platform for individuals looking to make money while enjoying advertisements.

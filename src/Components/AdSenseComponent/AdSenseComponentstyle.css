@@ -11,6 +11,7 @@
 @media (max-width: 412px) {
   #upper-div {
     width: 90%;
+    padding-bottom: 50.56% !important;
   }
 }
 

@@ -8,6 +8,8 @@ import About from './Components/About/About.jsx'
 import Account from './Components/Account/Account.jsx'
 import Blog from './Components/Blog/Blog.jsx'
 import Contact from './Components/Contact/Contact.jsx'
+import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy.jsx'
+import TermsAndConditions from './Components/Terms&Condition/Terms&condition.jsx'
 
 
 const router = createBrowserRouter(
@@ -20,6 +22,8 @@ const router = createBrowserRouter(
       <Route path='contact' element={<Contact/>}/>
       <Route path='account' element={<Account/>}/>
       <Route path='blog' element={<Blog/>}/>
+      <Route path='PrivacyPolicy' element={<PrivacyPolicy/>}/>
+      <Route path='Terms&Condition' element={<TermsAndConditions/>}/>
       <Route path='*' element={<div>Not Found</div>}/>
     </Route>
     
