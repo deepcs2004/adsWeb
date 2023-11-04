@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link,NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 function Header() {
   return (
@@ -8,7 +8,7 @@ function Header() {
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center">
             <img
-              
+
               src="https://img.icons8.com/papercut/60/cheap-2--v2.png"
               className=" mr-3 w-17 h-15"
               alt="Logo"
@@ -16,7 +16,7 @@ function Header() {
             <span className=' text-lime-500 text-xl font-mono'>MoneyView</span>
           </Link>
           <div className="flex items-center lg:order-2">
-            
+
             <Link
               to="#"
               className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
@@ -24,6 +24,10 @@ function Header() {
               Log in
             </Link>
           </div>
+
+
+
+
           <div
             className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
             id="mobile-menu-2"
@@ -34,9 +38,9 @@ function Header() {
               <li>
                 <NavLink
                   to="/"
-                  className={({isActive}) =>
+                  className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-green-500" :" text-gray-700"}
+                    ${isActive ? "text-green-500" : " text-gray-700"}
                     lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
@@ -47,9 +51,9 @@ function Header() {
               <li>
                 <NavLink
                   to="/about"
-                  className={({isActive}) =>
+                  className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-green-500" :" text-gray-700"}
+                    ${isActive ? "text-green-500" : " text-gray-700"}
                     lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
@@ -60,9 +64,9 @@ function Header() {
               <li>
                 <NavLink
                   to="/contact"
-                  className={({isActive}) =>
+                  className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-green-500" :" text-gray-700"}
+                    ${isActive ? "text-green-500" : " text-gray-700"}
                     lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
@@ -73,9 +77,9 @@ function Header() {
               <li>
                 <NavLink
                   to="/blog"
-                  className={({isActive}) =>
+                  className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-green-500" :" text-gray-700"}
+                    ${isActive ? "text-green-500" : " text-gray-700"}
                     lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
@@ -86,9 +90,9 @@ function Header() {
               <li>
                 <NavLink
                   to="/account"
-                  className={({isActive}) =>
+                  className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-green-500" :" text-gray-700"}
+                    ${isActive ? "text-green-500" : " text-gray-700"}
                     lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
@@ -96,7 +100,7 @@ function Header() {
                 </NavLink>
               </li>
 
-              
+
 
 
 
@@ -110,3 +114,6 @@ function Header() {
 }
 
 export default Header
+
+
+
