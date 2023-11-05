@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
+
+
 function Header() {
   return (
     <header className="shadow sticky z-50 top-0">
@@ -15,6 +17,11 @@ function Header() {
             />
             <span className=' text-lime-500 text-xl font-mono'>MoneyView</span>
           </Link>
+
+
+
+
+          {/* log in links */}
           <div className="flex items-center lg:order-2">
 
             <Link
@@ -26,22 +33,24 @@ function Header() {
           </div>
 
 
+          
 
-
+          {/* middle links div */}
           <div
-            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-            id="mobile-menu-2"
+            className=" justify-between items-center w-full lg:flex lg:w-auto lg:order-1 md:justify-end"
+            id="mobile-menu-2 "
           >
-            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <ul className="flex justify-center mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 md:items-center">
 
+              {/* middle links start here */}
 
               <li>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-green-500" : " text-gray-700"}
-                    lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
+        ${isActive ? "text-green-500" : " text-gray-700"}
+        lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
                   Home
@@ -53,8 +62,8 @@ function Header() {
                   to="/about"
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-green-500" : " text-gray-700"}
-                    lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
+        ${isActive ? "text-green-500" : " text-gray-700"}
+        lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
                   About
@@ -66,8 +75,8 @@ function Header() {
                   to="/contact"
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-green-500" : " text-gray-700"}
-                    lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
+        ${isActive ? "text-green-500" : " text-gray-700"}
+        lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
                   Contact
@@ -79,8 +88,8 @@ function Header() {
                   to="/blog"
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-green-500" : " text-gray-700"}
-                    lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
+        ${isActive ? "text-green-500" : " text-gray-700"}
+        lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
                   Blog
@@ -92,22 +101,27 @@ function Header() {
                   to="/account"
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 
-                    ${isActive ? "text-green-500" : " text-gray-700"}
-                    lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
+        ${isActive ? "text-green-500" : " text-gray-700"}
+        lg:hover:bg-transparent lg:border-0 hover:text-green-500 lg:p-0`
                   }
                 >
                   Account
                 </NavLink>
               </li>
 
-
-
-
-
+              {/* middle links ends here */}
 
             </ul>
+
           </div>
+          {/* middle links div end here */}
+
+
+
         </div>
+
+
+
       </nav>
     </header>
   );
