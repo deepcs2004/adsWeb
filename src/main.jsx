@@ -11,6 +11,8 @@ import Contact from './Components/Contact/Contact.jsx'
 import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy.jsx'
 import TermsAndConditions from './Components/Terms&Condition/Terms&condition.jsx'
 import AccountPage from './Components/Account/Account.jsx'
+import Login from './Components/Login/Login.jsx'
+import Register from './Components/Register/Register.jsx'
 
 
 const router = createBrowserRouter(
@@ -26,6 +28,8 @@ const router = createBrowserRouter(
       <Route path='PrivacyPolicy' element={<PrivacyPolicy/>}/>
       <Route path='Terms&Condition' element={<TermsAndConditions/>}/>
       <Route path='Account' element={<AccountPage/>}/>
+      <Route path='Login' element={<Login/>}/>
+      <Route path='Register' element={<Register/>}/>
       <Route path='*' element={<div>Not Found</div>}/>
     </Route>
     
