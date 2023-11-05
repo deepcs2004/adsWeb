@@ -1,7 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { Link,useNavigate, useNavigationType } from 'react-router-dom';
+import { useAuth } from '../AuthContext/AuthContext';
 
 const Login = () => {
+
+    const navigate = useNavigate()
+    const {user} = useAuth()
+
+    useEffect(()=>{
+        if(user){
+            navigate('/')
+        }
+    },[])
+
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="w-full sm:w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 max-w-md">

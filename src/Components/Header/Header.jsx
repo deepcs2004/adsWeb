@@ -1,9 +1,20 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import './Header.css';
+import { useAuth } from '../AuthContext/AuthContext';
 
 
 function Header() {
+
+  const navigate = useNavigate()
+  const { user } = useAuth()
+
+
+const logoutClick=()=>{
+  navigate('/login')
+}
+
+
   return (
     <header className="shadow sticky z-50 top-0">
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
@@ -21,19 +32,32 @@ function Header() {
 
 
 
+
           {/* log in links */}
           <div className="flex items-center lg:order-2">
 
-            <Link
+            {user ? (
+              <Link
+                to="/login"
+                className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                onClick={logoutClick}
+              >
+                Log out
+              </Link>
+            ) : (
+              <Link
               to="/login"
               className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
             >
               Log in
             </Link>
+              )}
+
+
           </div>
 
 
-          
+
 
           {/* middle links div */}
           <div
