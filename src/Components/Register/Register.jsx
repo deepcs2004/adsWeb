@@ -1,12 +1,21 @@
-import React, { useRef } from 'react';
+import React, { useRef,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../AuthContext/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
     const registerForm = useRef(null)
 
-    const{registerUser} = useAuth()
+    const {user, registerUser } = useAuth()
+
+    const navigate = useNavigate()
+    useEffect(() => {
+        if (user) {
+            navigate('/account')
+        }
+    }, [])
+
 
     const handelSubmit = (e) => {
         e.preventDefault()
@@ -16,12 +25,12 @@ const Register = () => {
         const password = registerForm.current.elements.password.value
         const confirmPassword = registerForm.current.elements.confirmPassword.value
 
-        if(password!=confirmPassword){
+        if (password != confirmPassword) {
             alert('pass not match')
             return
         }
 
-        const userInfo = {username,email,password,confirmPassword}
+        const userInfo = { username, email, password, confirmPassword }
         registerUser(userInfo)
 
 

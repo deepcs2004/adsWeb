@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect, createContext, Children } from "react";
 import { account } from '../../AppWriteConfig';
-
+import { ID } from "appwrite";
 
 const AuthContext = createContext()
 
@@ -13,10 +13,10 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         checkUserStatus()
-        
+
     }, [])
 
-
+    // to login user function
     const loginUser = async (userInfo) => {
         setLoading(true)
 
@@ -28,7 +28,6 @@ export const AuthProvider = ({ children }) => {
 
             let accountDetails = await account.get()
 
-            console.log('accountDetails:',accountDetails)
             setUser(accountDetails)
 
         } catch (error) {
@@ -40,27 +39,51 @@ export const AuthProvider = ({ children }) => {
     }
 
 
-
+    // to logout function
     const logOutUser = () => {
         account.deleteSession('current')
         setUser(null)
     }
 
 
+    // to register new user function
+    const registerUser = async (userInfo) => {
+        setLoading(true)
 
-    const registerUser = (userInfo) => {
+        try {
+            let response = await account.create(
+                ID.unique(),
+                userInfo.email,
+                userInfo.password,
+                userInfo.username,
+            )
 
+            await account.createEmailSession(
+                userInfo.email,
+                userInfo.password
+            )
+
+            let accountDetails = await account.get()
+
+            setUser(accountDetails)
+
+
+        } catch (error) {
+            console.error(error)
+        }
+
+        setLoading(false)
     }
 
-
-    const checkUserStatus = async() => {
+    // to stay logedin function
+    const checkUserStatus = async () => {
 
         try {
             let accountDetails = await account.get()
             setUser(accountDetails)
 
         } catch (error) {
-            
+
         }
 
         setLoading(false)
