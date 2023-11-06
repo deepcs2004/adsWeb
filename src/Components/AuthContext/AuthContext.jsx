@@ -1,37 +1,54 @@
 import { useContext, useState, useEffect, createContext, Children } from "react";
+import { account } from '../../AppWriteConfig';
+
 
 const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
 
     const [loading, setLoading] = useState(true)
-    const [user, setUser] = useState(true)
+    const [user, setUser] = useState(false)
 
-    
 
-    useEffect(()=>{
+
+    useEffect(() => {
         setLoading(false)
-    },[])
+    }, [])
 
 
-    const loginUser=(userInfo)=>{
+    const loginUser = async (userInfo) => {
+        setLoading(true)
+
+        try {
+            let response = await account.createEmailSession(
+                userInfo.email,
+                userInfo.password
+            )
+
+            console.log('session:',response)
+
+        } catch (error) {
+            console.error(error)
+        }
+
+
+        setLoading(false)
+    }
+
+
+
+    const logOutUser = () => {
 
     }
 
 
 
-    const logOutUser =()=>{
+    const registerUser = (userInfo) => {
 
     }
 
 
-
-    const registerUser =(userInfo)=>{
-
-    }
-
-
-    const checkUserStatus =()=>{
+    const checkUserStatus = () => {
 
     }
 
@@ -43,7 +60,7 @@ export const AuthProvider = ({ children }) => {
         loginUser,
         logOutUser,
         registerUser,
-        
+
     }
 
 
@@ -54,7 +71,7 @@ export const AuthProvider = ({ children }) => {
     )
 }
 
-export const useAuth =()=>{
+export const useAuth = () => {
     return useContext(AuthContext)
 }
 
