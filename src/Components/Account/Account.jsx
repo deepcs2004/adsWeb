@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useAuth } from '../AuthContext/AuthContext';
 
 function AccountPage() {
   const [userData, setUserData] = useState(null);
+  const { user } = useAuth();
 
-  useEffect(() => {
-    // Fetch user data from the backend API (replace with your actual API endpoint)
-    fetch('your_backend_api_endpoint')
-      .then((response) => response.json())
-      .then((data) => setUserData(data))
-      .catch((error) => console.error('Error fetching user data: ', error));
-  }, []);
-
+ 
   const handleWithdraw = () => {
     // Implement the logic for the withdrawal process here
     // This can involve making another API request to process the withdrawal
@@ -21,8 +16,8 @@ function AccountPage() {
     <div className="max-w-4xl mx-auto p-4">
       <div className="bg-white rounded-lg shadow-md p-6 mb-8">
         <h1 className="text-4xl font-semibold text-blue-600 mb-6">Account Information</h1>
-        <p className="text-xl text-gray-800 mb-6">
-          <strong>Username:</strong> {userData ? userData.name : 'Loading...'}
+        <p className="text-2xl font-mono text-gray-800 mb-6">
+          <strong>Username:</strong> {user ? user.name : 'Loading...'}
         </p>
         <div className="flex items-center">
           <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-2xl">

@@ -7,12 +7,10 @@ import { useAuth } from '../AuthContext/AuthContext';
 function Header() {
 
   const navigate = useNavigate()
-  const { user } = useAuth()
+  const { user,logOutUser } = useAuth()
 
 
-const logoutClick=()=>{
-  navigate('/login')
-}
+
 
 
   return (
@@ -40,7 +38,7 @@ const logoutClick=()=>{
               <Link
                 to="/login"
                 className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
-                onClick={logoutClick}
+                onClick={logOutUser}
               >
                 Log out
               </Link>

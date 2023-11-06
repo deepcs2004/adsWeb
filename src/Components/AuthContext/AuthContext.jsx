@@ -12,7 +12,8 @@ export const AuthProvider = ({ children }) => {
 
 
     useEffect(() => {
-        setLoading(false)
+        checkUserStatus()
+        
     }, [])
 
 
@@ -25,7 +26,10 @@ export const AuthProvider = ({ children }) => {
                 userInfo.password
             )
 
-            console.log('session:',response)
+            let accountDetails = await account.get()
+
+            console.log('accountDetails:',accountDetails)
+            setUser(accountDetails)
 
         } catch (error) {
             console.error(error)
@@ -38,7 +42,8 @@ export const AuthProvider = ({ children }) => {
 
 
     const logOutUser = () => {
-
+        account.deleteSession('current')
+        setUser(null)
     }
 
 
@@ -48,8 +53,17 @@ export const AuthProvider = ({ children }) => {
     }
 
 
-    const checkUserStatus = () => {
+    const checkUserStatus = async() => {
 
+        try {
+            let accountDetails = await account.get()
+            setUser(accountDetails)
+
+        } catch (error) {
+            
+        }
+
+        setLoading(false)
     }
 
 
