@@ -1,37 +1,68 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './AdSenseComponentstyle.css';
+import { databases } from '../../AppWriteConfig';
+import { v4 as uuidv4 } from 'uuid';
+import { useAuth } from '../AuthContext/AuthContext';
+
+
+
 
 function AdSenseComponent() {
-    const [adDisplayed, setAdDisplayed] = useState(false);
+    const [coin, setCoin] = useState(null);
+    const [divs, setDivs] = useState([]);
+    const [time, setTime] = useState(null);
+
+    const { user } = useAuth()
 
     const handleSeeAdClick = () => {
-        // Load the AdSense code and display the ad after a delay
-        const script = document.createElement('script');
+        // adsense script
+        // const adcode = (<div>
+        {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-        script.src = 'your-adsense-script-url'; // Replace with the actual AdSense script URL
-        script.async = true;
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({ });
+            </script> */}
 
-        // Simulate ad loading delay (adjust as needed)
-        script.onload = () => {
+
+        {/* </div>); */ }
+
+        // const adContainer = document.getElementById("adsensediv");
+        // adContainer.innerHTML = adcode;
+
+        if (user) {
+            let currentTime = 5;
+            const timer = setInterval(() => {
+                setTime(currentTime);
+                currentTime -= 1;
+            }, 1000)
+            setDivs([...divs, <div key={divs.length} className="bg-blue-200 h-full w-full  m-8">New Div</div>]);
+
+
+
             setTimeout(() => {
-                setAdDisplayed(true);
-            }, 2000); // Simulate a 2-second ad load delay
-        };
+                setDivs([]);
+                clearInterval(timer)
+            }, 6000);
+        }else(
+            alert("firt login")
+        )
 
-        document.head.appendChild(script);
 
-        setAdDisplayed(true);
+
+
+
+
+
     }
 
-    const handleSeeNextAdClick = () => {
-        // Load the next AdSense ad (replace 'your-adsense-script-url' again)
-        const script = document.createElement('script');
-        script.src = 'your-adsense-script-url';
-        script.async = true;
-        document.head.appendChild(script);
-    }
 
-    
+
+
     return (
         <div className="ad-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <div
@@ -46,32 +77,24 @@ function AdSenseComponent() {
                     boxShadow: '0 0 10px 5px rgba(128, 0, 128, 0.6)',
                 }}
             >
-                {adDisplayed ? (
-                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
-                        {/* AdSense ads will be displayed here */}
-                        <div id="adsense-div" style={{ width: '100%', height: '100%' }}></div>
+
+
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
+                    {/* AdSense ads will be displayed here */}
+                    <div id="adsensediv" style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        {divs}
                     </div>
-                ) : (
-                    <button
-                        onClick={handleSeeAdClick}
-                        style={{
-                            position: 'absolute',
-                            top: '50%',
-                            left: '50%',
-                            transform: 'translate(-50%, -50%)',
-                            padding: '10px 20px',
-                            borderRadius: '5px',
-                            cursor: 'pointer',
-                            transition: 'background 0.3s',
-                        }}
-                        className="coin-button font-mono font-bold text-xl shadow-md text-white bg-cyan-950 hover.bg-cyan-900"
-                    >
-                        See Ad
-                    </button>
-                )}
+                </div>
+
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-                <button className="bg-blue-600 shadow-md hover.bg-blue-700 m-4 text-white font-bold py-2 px-4 rounded" onClick={handleSeeNextAdClick}>See Next Ad</button>
+                <button
+                    className="bg-blue-600 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded shadow-md m-4"
+                    onClick={handleSeeAdClick}
+                >
+                    {time > 0 ? `See Ad ${time}` : 'See Ad'}
+                </button>
+
             </div>
         </div>
     );
