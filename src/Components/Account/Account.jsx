@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../AuthContext/AuthContext';
 
+
 function AccountPage() {
   const [userData, setUserData] = useState(null);
   const { user,coinvalue } = useAuth();
 
- 
+  
+
   const handleWithdraw = () => {
     // Implement the logic for the withdrawal process here
     // This can involve making another API request to process the withdrawal
@@ -25,7 +27,7 @@ function AccountPage() {
             {user ? coinvalue : '...'}
           </div>
           <p className="text-xl text-gray-800 ml-6">
-            <strong>Number of Coins:</strong>
+            <strong>Number of Coins: {coinvalue}</strong>
           </p>
         </div>
         <button

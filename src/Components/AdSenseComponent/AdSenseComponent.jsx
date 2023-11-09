@@ -12,7 +12,7 @@ function AdSenseComponent() {
     const [divs, setDivs] = useState([]);
     const [time, setTime] = useState(null);
 
-    const { user,updateCoinValue } = useAuth()
+    const { user, updateCoinValue } = useAuth()
 
     const handleSeeAdClick = async (e) => {
         e.preventDefault()
@@ -63,9 +63,20 @@ function AdSenseComponent() {
 
             promise.then(function (response) {
                 console.log(response); // Success
-                // console.log(response.coin_amt);
-                updateCoinValue(response.coin_amt);
-                
+
+                const currentCoins = response.coin_amt;
+                const localCoinUpdate = currentCoins + 20;
+                const updatedData = {
+                    coin_amt: currentCoins + 20
+                };
+                updateCoinValue(localCoinUpdate);
+
+                return databases.updateDocument(DATABASE_ID, COLLECTION_ID, documentID, updatedData);
+
+
+
+
+
             }, function (error) {
                 console.log(error); // Failure
             });
@@ -73,7 +84,7 @@ function AdSenseComponent() {
 
 
 
-            
+
 
             setTimeout(() => {
                 setDivs([]);
