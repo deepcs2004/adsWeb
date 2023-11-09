@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './AdSenseComponentstyle.css';
-import { databases } from '../../AppWriteConfig';
+// import { client } from '../../AppWriteConfig';/
 import { v4 as uuidv4 } from 'uuid';
 import { useAuth } from '../AuthContext/AuthContext';
 
@@ -8,13 +8,16 @@ import { useAuth } from '../AuthContext/AuthContext';
 
 
 function AdSenseComponent() {
-    const [coin, setCoin] = useState(null);
+    const [userValue, setUserValue] = useState(0);
     const [divs, setDivs] = useState([]);
     const [time, setTime] = useState(null);
 
     const { user } = useAuth()
 
-    const handleSeeAdClick = () => {
+    const handleSeeAdClick = async (e) => {
+        e.preventDefault()
+
+
         // adsense script
         // const adcode = (<div>
         {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -27,13 +30,18 @@ function AdSenseComponent() {
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({ });
             </script> */}
-
-
         {/* </div>); */ }
 
         // const adContainer = document.getElementById("adsensediv");
         // adContainer.innerHTML = adcode;
 
+
+
+        
+
+
+
+        // timing plus div insert code here
         if (user) {
             let currentTime = 5;
             const timer = setInterval(() => {
@@ -42,15 +50,20 @@ function AdSenseComponent() {
             }, 1000)
             setDivs([...divs, <div key={divs.length} className="bg-blue-200 h-full w-full  m-8">New Div</div>]);
 
+            console.log(user)
 
 
             setTimeout(() => {
                 setDivs([]);
                 clearInterval(timer)
             }, 6000);
-        }else(
+        } else (
             alert("firt login")
         )
+
+
+
+        //coin databse from here
 
 
 

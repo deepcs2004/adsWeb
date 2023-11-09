@@ -64,15 +64,7 @@ export const AuthProvider = ({ children }) => {
             )
 
             let accountDetails = await account.get()
-
-            // initailizing the coin value for creating databse
-            const initialCoinValue = 0;
-
-            await appwrite.database.createDocument('users', response.$id, {
-
-                coins: initialCoinValue,
-
-            });
+                
 
             setUser(accountDetails)
 
