@@ -3,13 +3,14 @@ import { useAuth } from '../AuthContext/AuthContext';
 
 function AccountPage() {
   const [userData, setUserData] = useState(null);
-  const { user } = useAuth();
+  const { user,coinvalue } = useAuth();
 
  
   const handleWithdraw = () => {
     // Implement the logic for the withdrawal process here
     // This can involve making another API request to process the withdrawal
     // and updating the user's coin balance accordingly
+    console.log(coinvalue);
   };
 
   return (
@@ -21,7 +22,7 @@ function AccountPage() {
         </p>
         <div className="flex items-center">
           <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-2xl">
-            {userData ? userData.coins : '...'}
+            {user ? coinvalue : '...'}
           </div>
           <p className="text-xl text-gray-800 ml-6">
             <strong>Number of Coins:</strong>

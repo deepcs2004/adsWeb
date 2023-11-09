@@ -8,11 +8,11 @@ import { useAuth } from '../AuthContext/AuthContext';
 
 
 function AdSenseComponent() {
-    const [coinvalue, setCoinValue] = useState(null);
+    // const [coinvalue, setCoinValue] = useState(null);
     const [divs, setDivs] = useState([]);
     const [time, setTime] = useState(null);
 
-    const { user } = useAuth()
+    const { user,updateCoinValue } = useAuth()
 
     const handleSeeAdClick = async (e) => {
         e.preventDefault()
@@ -62,7 +62,9 @@ function AdSenseComponent() {
             const promise = databases.getDocument(DATABASE_ID, COLLECTION_ID, documentID);
 
             promise.then(function (response) {
-                // console.log(response); // Success
+                console.log(response); // Success
+                // console.log(response.coin_amt);
+                updateCoinValue(response.coin_amt);
                 
             }, function (error) {
                 console.log(error); // Failure
@@ -71,7 +73,7 @@ function AdSenseComponent() {
 
 
 
-
+            
 
             setTimeout(() => {
                 setDivs([]);
