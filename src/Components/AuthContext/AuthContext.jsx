@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect, createContext, Children } from "react";
-import { account } from '../../AppWriteConfig';
+import { account,PROJECT_ID,COLLECTION_ID,databases,DATABASE_ID } from '../../AppWriteConfig';
 import { ID } from "appwrite";
 
 const AuthContext = createContext()
@@ -30,10 +30,14 @@ export const AuthProvider = ({ children }) => {
 
             setUser(accountDetails)
 
+
+            
+
         } catch (error) {
             console.error(error)
         }
 
+        
 
         setLoading(false)
     }
@@ -63,15 +67,41 @@ export const AuthProvider = ({ children }) => {
                 userInfo.password
             )
 
+            
+            // document create
+
             let accountDetails = await account.get()
-                
+
+            const documentData = {
+                coin_amt: 0, 
+                user_is: accountDetails.$id, 
+                username: userInfo.username 
+            };
+
+            const documentID = ID.unique();
+            const promise = databases.createDocument(DATABASE_ID, COLLECTION_ID, documentID, documentData);
+
+            promise.then(function (response) {
+                console.log(response); 
+            }, function (error) {
+                console.error(error); 
+            });
+
+
+
+
+
+
 
             setUser(accountDetails)
+
+            
 
 
         } catch (error) {
             console.error(error)
         }
+
 
         setLoading(false)
     }

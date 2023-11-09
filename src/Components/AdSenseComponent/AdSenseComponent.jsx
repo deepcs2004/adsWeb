@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './AdSenseComponentstyle.css';
-// import { client } from '../../AppWriteConfig';/
+// import { client } from '../../AppWriteConfig';
 import { v4 as uuidv4 } from 'uuid';
 import { useAuth } from '../AuthContext/AuthContext';
 
