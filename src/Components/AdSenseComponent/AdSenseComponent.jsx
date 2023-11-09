@@ -53,7 +53,7 @@ function AdSenseComponent() {
             }, 1000)
             setDivs([...divs, <div key={divs.length} className="bg-blue-200 h-full w-full  m-8">New Div</div>]);
 
-            console.log(user.$id)
+            // console.log(user.$id)
 
 
 
@@ -62,7 +62,7 @@ function AdSenseComponent() {
             const promise = databases.getDocument(DATABASE_ID, COLLECTION_ID, documentID);
 
             promise.then(function (response) {
-                console.log(response); // Success
+                // console.log(response); // Success
 
                 const currentCoins = response.coin_amt;
                 const localCoinUpdate = currentCoins + 20;

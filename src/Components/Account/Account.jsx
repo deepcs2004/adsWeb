@@ -1,18 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../AuthContext/AuthContext';
+import { account, PROJECT_ID, COLLECTION_ID, databases, DATABASE_ID } from '../../AppWriteConfig';
+
 
 
 function AccountPage() {
   const [userData, setUserData] = useState(null);
-  const { user,coinvalue } = useAuth();
+  const { user, coinvalue, updateCoinValue } = useAuth();
 
-  
+
+  useEffect(() => {
+    const documentID = user.$id
+    const promise = databases.getDocument(DATABASE_ID, COLLECTION_ID, documentID);
+    promise.then(function (response) {
+      const currentCoins = response.coin_amt;
+      updateCoinValue(currentCoins);
+
+    }, function (error) {
+      console.log(error);
+    });
+
+  }, []);
 
   const handleWithdraw = () => {
-    // Implement the logic for the withdrawal process here
-    // This can involve making another API request to process the withdrawal
-    // and updating the user's coin balance accordingly
-    console.log(coinvalue);
+    if (coinvalue < 500) {
+      alert("First You Have To Earn Atleast 5000 To Redeem")
+    }
+
   };
 
   return (
