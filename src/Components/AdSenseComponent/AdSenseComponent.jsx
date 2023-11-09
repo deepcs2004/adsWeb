@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './AdSenseComponentstyle.css';
-// import { client } from '../../AppWriteConfig';
+import { account, PROJECT_ID, COLLECTION_ID, databases, DATABASE_ID } from '../../AppWriteConfig';
 import { v4 as uuidv4 } from 'uuid';
 import { useAuth } from '../AuthContext/AuthContext';
 
@@ -8,7 +8,7 @@ import { useAuth } from '../AuthContext/AuthContext';
 
 
 function AdSenseComponent() {
-    const [userValue, setUserValue] = useState(0);
+    const [coinvalue, setCoinValue] = useState(null);
     const [divs, setDivs] = useState([]);
     const [time, setTime] = useState(null);
 
@@ -37,7 +37,10 @@ function AdSenseComponent() {
 
 
 
-        
+
+
+
+
 
 
 
@@ -50,7 +53,24 @@ function AdSenseComponent() {
             }, 1000)
             setDivs([...divs, <div key={divs.length} className="bg-blue-200 h-full w-full  m-8">New Div</div>]);
 
-            console.log(user)
+            console.log(user.$id)
+
+
+
+            // database
+            const documentID = user.$id
+            const promise = databases.getDocument(DATABASE_ID, COLLECTION_ID, documentID);
+
+            promise.then(function (response) {
+                // console.log(response); // Success
+                
+            }, function (error) {
+                console.log(error); // Failure
+            });
+
+
+
+
 
 
             setTimeout(() => {
@@ -64,6 +84,7 @@ function AdSenseComponent() {
 
 
         //coin databse from here
+
 
 
 

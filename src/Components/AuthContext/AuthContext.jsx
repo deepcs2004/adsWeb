@@ -78,7 +78,7 @@ export const AuthProvider = ({ children }) => {
                 username: userInfo.username 
             };
 
-            const documentID = ID.unique();
+            const documentID = accountDetails.$id;
             const promise = databases.createDocument(DATABASE_ID, COLLECTION_ID, documentID, documentData);
 
             promise.then(function (response) {
