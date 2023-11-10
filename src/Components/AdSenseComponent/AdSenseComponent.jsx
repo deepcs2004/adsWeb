@@ -91,7 +91,7 @@ function AdSenseComponent() {
                 clearInterval(timer)
             }, 6000);
         } else (
-            alert("firt login")
+            alert("first login")
         )
 
 
