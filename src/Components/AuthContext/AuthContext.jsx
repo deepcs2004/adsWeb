@@ -82,9 +82,9 @@ export const AuthProvider = ({ children }) => {
             const promise = databases.createDocument(DATABASE_ID, COLLECTION_ID, documentID, documentData);
 
             promise.then(function (response) {
-                console.log(response);
+                console.log('databse create resoponse:',response);
             }, function (error) {
-                console.error(error);
+                console.error('databse fail resoponse:',error);
             });
 
 
