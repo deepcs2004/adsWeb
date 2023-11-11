@@ -42,7 +42,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              
+
 
               <div className="flex items-center mt-2 text-gray-600">
                 <svg
@@ -62,7 +62,7 @@ export default function Contact() {
                   />
                 </svg>
                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                support@moneyview.cloud
+                  support@moneyview.cloud
                 </div>
               </div>
             </div>
