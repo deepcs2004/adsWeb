@@ -10,7 +10,7 @@ function AccountPage() {
 
 
   useEffect(() => {
-    <Link to="/" />
+    
     const documentID = user.$id
     const promise = databases.getDocument(DATABASE_ID, COLLECTION_ID, documentID);
     promise.then(function (response) {
