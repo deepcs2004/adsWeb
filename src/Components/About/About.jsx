@@ -12,7 +12,7 @@ export default function About() {
             </div>
             <h1 className="text-3xl font-semibold text-gray-800 mb-4">About Us</h1>
             <p className="text-lg text-gray-600 mb-8">
-                Welcome to <strong className="font-bold">Earn Watch Ads</strong>, where you can turn your time into earnings by simply watching ads. Our mission is to provide a user-friendly platform for individuals looking to make money while enjoying advertisements.
+                Welcome to <strong className="font-bold">MoneyView</strong>, where you can turn your time into earnings by simply watching ads. Our mission is to provide a user-friendly platform for individuals looking to make money while enjoying advertisements.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Story</h2>
@@ -22,7 +22,7 @@ export default function About() {
 
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">How It Works</h2>
             <p className="text-lg text-gray-600 mb-8">
-                Earning money through <strong className="font-bold">Earn Watch Ads</strong> is easy. Simply sign up, log in, and start watching ads. You'll accumulate earnings with each ad view. We offer a seamless and secure payment process to ensure you receive your earnings on time.
+                Earning money through <strong className="font-bold">MoneyView</strong> is easy. Simply sign up, log in, and start watching ads. You'll accumulate earnings with each ad view. We offer a seamless and secure payment process to ensure you receive your earnings on time.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
