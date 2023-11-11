@@ -27,7 +27,7 @@ export default function About() {
 
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
             <p className="text-lg text-gray-600 mb-4">
-                We value your feedback and questions. If you have any inquiries or suggestions, please don't hesitate to get in touch with our support team at <a className="text-blue-500 hover:underline" href="mailto:support@moneyview.com">support@moneyview.com</a>.
+                We value your feedback and questions. If you have any inquiries or suggestions, please don't hesitate to get in touch with our support team at <a className="text-blue-500 hover:underline" href="mailto:support@moneyview.com">support@moneyview.cloud</a>.
             </p>
         </div>);
 }
