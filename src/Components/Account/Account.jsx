@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../AuthContext/AuthContext';
 import { account, PROJECT_ID, COLLECTION_ID, databases, DATABASE_ID } from '../../AppWriteConfig';
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 function AccountPage() {
@@ -10,7 +10,7 @@ function AccountPage() {
 
 
   useEffect(() => {
-    
+
     const documentID = user.$id
     const promise = databases.getDocument(DATABASE_ID, COLLECTION_ID, documentID);
     promise.then(function (response) {
@@ -20,6 +20,9 @@ function AccountPage() {
     }, function (error) {
       console.log(error);
     });
+
+
+
 
   }, []);
 
