@@ -4,20 +4,20 @@ function Blog() {
   const bgImage = 'https://mcdn.wallpapersafari.com/medium/31/17/fo1SHa.jpg';
 
 
-  // adsense coden
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6590336210731139";
-    script.crossOrigin = "anonymous";
+  // // adsense coden
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.async = true;
+  //   script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6590336210731139";
+  //   script.crossOrigin = "anonymous";
 
-    document.head.appendChild(script);
+  //   document.head.appendChild(script);
 
-    return () => {
-      // Cleanup: Remove the script when the component is unmounted
-      document.head.removeChild(script);
-    };
-  }, []);
+  //   return () => {
+  //     // Cleanup: Remove the script when the component is unmounted
+  //     document.head.removeChild(script);
+  //   };
+  // }, []);
 
   return (
     <div style={{ backgroundImage: `url(${bgImage})` }} className='w-full  bg-center'>
