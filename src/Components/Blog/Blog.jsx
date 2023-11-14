@@ -26,7 +26,7 @@ function Blog() {
           <h1 className="text-3xl font-semibold text-blue-600 mb-4">The Art of Time Management</h1>
           <p className="text-sm text-gray-600 mb-4">Published on November 12, 2023</p>
           <img
-            src="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/Timemanagement-1686159523483.png?w=1152&fm=auto&ar=2:1&mode=crop&crop=faces"
+            src="https://images.pexels.com/photos/745365/pexels-photo-745365.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Time Management Image"
             className="w-full rounded-lg mb-4"
           />
@@ -39,7 +39,7 @@ function Blog() {
           <h1 className="text-3xl font-semibold text-green-600 mb-4">The Future of E-Commerce</h1>
           <p className="text-sm text-gray-600 mb-4">Published on January 8, 2023</p>
           <img
-            src="https://www.velocityconsultancy.com/wp-content/uploads/2018/04/post-20-img-1.jpg"
+            src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg"
             alt="E-Commerce Image"
             className="w-full rounded-lg mb-4"
           />
@@ -52,7 +52,7 @@ function Blog() {
           <h1 className="text-3xl font-semibold text-purple-600 mb-4">Mastering the Art of Public Speaking</h1>
           <p className="text-sm text-gray-600 mb-4">Published on February 15, 2023</p>
           <img
-            src="https://thebrew.co.uk/wp-content/uploads/2023/03/shutterstock_1746589040.jpg"
+            src="https://images.pexels.com/photos/2235/music-sound-communication-audio.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Public Speaking Image"
             className="w-full rounded-lg mb-4"
           />
@@ -67,7 +67,7 @@ function Blog() {
           <h1 className="text-3xl font-semibold text-yellow-600 mb-4">Traveling on a Budget</h1>
           <p className="text-sm text-gray-600 mb-4">Published on April 10, 2023</p>
           <img
-            src="https://www.travelandleisure.com/thmb/MriQxOVvVJ1MLNgWUXbGl8L2rGk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-Backpacker-BUDGET0323-eeaf531276694f93966baa8fbcd2730d.jpg"
+            src="https://images.pexels.com/photos/346767/pexels-photo-346767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Budget Travel Image"
             className="w-full rounded-lg mb-4"
           />
@@ -80,7 +80,7 @@ function Blog() {
           <h1 className="text-3xl font-semibold text-indigo-600 mb-4">Navigating the World of Cryptocurrency</h1>
           <p className="text-sm text-gray-600 mb-4">Published on May 5, 2023</p>
           <img
-            src="https://pcsite.co.uk/wp-content/uploads/sites/7/2023/10/DALL%C2%B7E-2023-10-27-09.58.11-3D-render-of-a-table-with-various-cryptocurrency-coins-like-Bitcoin-Ethereum-and-Litecoin.-Above-the-coins-hover-holographic-charts-graphs-and-dat-1.png"
+            src="https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Cryptocurrency Image"
             className="w-full rounded-lg mb-4"
           />
@@ -95,7 +95,7 @@ function Blog() {
           <h1 className="text-3xl font-semibold text-teal-600 mb-4">The Power of Positive Thinking</h1>
           <p className="text-sm text-gray-600 mb-4">Published on August 10, 2023</p>
           <img
-            src="https://i0.wp.com/apeejay.news/wp-content/uploads/2023/07/10072023_The-power-of-Positive-Thinking.jpg?resize=740%2C740&ssl=1"
+            src="https://images.pexels.com/photos/260024/pexels-photo-260024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Positive Thinking Image"
             className="w-full rounded-lg mb-4"
           />
@@ -108,7 +108,7 @@ function Blog() {
           <h1 className="text-3xl font-semibold text-red-600 mb-4">Building a Personal Brand Online</h1>
           <p className="text-sm text-gray-600 mb-4">Published on September 5, 2023</p>
           <img
-            src="https://www.thethrive.in/wp-content/uploads/2022/10/26.jpg"
+            src="https://images.pexels.com/photos/457445/pexels-photo-457445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Personal Brand Image"
             className="w-full rounded-lg mb-4"
           />
