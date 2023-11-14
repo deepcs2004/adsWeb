@@ -30,10 +30,10 @@ const router = createBrowserRouter(
         <Route path='Terms&Condition' element={<TermsAndConditions />} />
         <Route path='Login' element={<Login />} />
         <Route path='Register' element={<Register />} />
-
-        <Route element={<PrivateRoutes />}>
-          <Route path='Account' element={<AccountPage />} />
-        </Route>
+        <Route path='Account' element={<AccountPage />} />
+        {/* <Route element={<PrivateRoutes />}>
+          
+        </Route> */}
 
 
 
