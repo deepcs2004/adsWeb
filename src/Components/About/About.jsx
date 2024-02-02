@@ -12,7 +12,7 @@ export default function About() {
             </div>
             <h1 className="text-3xl font-semibold text-gray-800 mb-4">About Us</h1>
             <p className="text-lg text-gray-600 mb-8">
-                Welcome to <strong className="font-bold">MoneyView</strong>, where watching advertisements can earn you money during your free time. Our goal is to give people who want to earn money while watching adverts an easy-to-use platform.
+                Welcome to <strong className="font-bold">MoneyView</strong>, where watching advertisements can earn you money during your free time. Our goal is to giv people who want to earn money while watching adverts an easy-to-use platform.
 
             </p>
 
